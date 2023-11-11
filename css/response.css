@@ -1,0 +1,93 @@
+/* 모바일용 */
+
+
+@media all and (max-width:767px){
+    .logo{
+        left: 50%;
+        transform: translate(0%, -50%);
+        width: 140px;
+        }
+    .logo img{
+        width: 140px;
+    }
+    .inner{
+        width: 100%;
+    }
+    .main_banner_txt, .menu, .empty_01, .empty_02{
+        display: none;
+    }
+    .menu_btn{
+        display: block;
+    }
+    .main_banner{
+        height: 36vh;
+    }
+    .pants, .shoes, .tshirts, .shorts{
+        width: 100%;
+        height: 23vh;        
+        background-repeat: repeat;
+        background-position: left;
+        background-size: 70%;
+    }
+    .detailed_text{
+        width: 23vh;
+        right:0;
+        height: 21vh;
+        padding: 1vh 2vh;
+        background-color: rgb(94, 94, 94);
+        color: #d9d9d9;
+    }
+    
+    .detailed_text h3{
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.6rem;
+    }
+
+}
+  
+
+/* 태블릿용 */
+
+
+@media all and (min-width:768px) and (max-width:1024px){
+    .header{
+        height: 15vh;
+    }
+    
+    .inner{
+        width: 100%;
+        height: 15vh;
+    }
+    .logo{
+        top : 10%;
+        left: 50%;
+        height: 10vh;
+        margin: 0 auto;
+        transform: translate(-50%, 0%);
+    }
+    .logo img{
+        text-align: center;
+    }
+    .menu{
+        width: 100%;
+        height: 40px;
+    }
+    .empty_01, .empty_02{
+        display: none;
+    }
+    .header .inner .menu .gnb a li{
+        width: 25%;
+        box-sizing: border-box;
+    }
+    
+    .pants, .shoes, .tshirts, .shorts{
+        width: 49.4%;
+        height: 46vh;        
+        background-repeat: repeat;
+        background-position: left;
+        background-size: 110%;
+    }
+}
+  
+

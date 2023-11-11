@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="메타태그주소자리" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="서보영 디자인, 세상의 모든 디자인" />
+    <meta property="og:description" content="디자인 솔루션이 필요할 때, 서보영 디자인이 답이다. 탁월한 선택. 당신의 비자이너가 되어드리겠습니다." />
+    <meta property="og:image" content="suhvoyoung_meta.jpg" />
+    
+    
+    
+    <title>서보영 디자인</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/0response.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/765cc4a11c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container_wrap">
+    <header class="header">
+        <div class="header_inner">
+            <div class="top_menu">
+                <ul class="top_menu_l">
+                    <a href=""><li>Home</li></a>
+                    <a href=""><li>로그인</li></a>
+                    <a href=""><li>회원가입</li></a>
+                </ul>
+                
+                <ul class="top_menu_r">
+                    <a href="#"><li><i class="fa-brands fa-instagram fa-lg"  style="color: #b0977a;"></i></li></a>
+                    <a href="#"><li><i class="fa-brands fa-square-google-plus fa-lg" style="color: #b0977a;"></i></li></a>
+                    <a href="#"><li><i class="fa-brands fa-square-twitter fa-lg" style="color: #b0977a;"></i></li></a>
+                    <a href="#"><li><i class="fa-brands fa-square-facebook fa-lg" style="color: #b0977a;"></i></li></a>                    
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="images/logo.png" alt="서보영 디자인 회사 로고"/>
+            </div>
+            <nav class="nav">
+                <ul class="menu">
+                    <li>COMPANY
+                        <ul class="sub_menu">
+                            <li><a href="#">COM_sub_01</a></li>
+                            <li><a href="#">COM_sub_02</a></li>
+                            <li><a href="#">COM_sub_03</a></li>
+                        </ul>
+                    </li>
+                    <li>BUSINESS
+                        <ul class="sub_menu">
+                            <li><a href="#">BUS_sub_01</a></li>
+                            <li><a href="#">BUS_sub_02</a></li>
+                            <li><a href="#">BUS_sub_03</a></li>
+                        </ul>
+                    </li>
+                    <li>PRODUCT
+                        <ul class="sub_menu">
+                            <li><a href="#">PRO_sub_01</a></li>
+                            <li><a href="#">PRO_sub_02</a></li>
+                            <li><a href="#">PRO_sub_03</a></li>
+                        </ul>
+                    </li>
+                    <li>ONLINE
+                        <ul class="sub_menu">
+                            <li><a href="#">ONLINE_sub_01</a></li>
+                            <li><a href="#">ONLINE_sub_02</a></li>
+                            <li><a href="#">ONLINE_sub_03</a></li>
+                        </ul>
+                    </li>
+                    <li>COSTOMER
+                        <ul class="sub_menu">
+                            <li><a href="#">COS_sub_01</a></li>
+                            <li><a href="#">COS_sub_02</a></li>
+                            <li><a href="#">COS_sub_03</a></li>
+                        </ul>
+                    </li>
+                    <li>SHOP</li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+<!-- 이미지 슬라이딩 -->
+<!-- 마케팅 적으로 매우 중요한 아이캐치.
+     시선을 잡는다.=스크롤, 클릭
+    사람들을 불러 모아서 처음만나는 회사의 이미지. 
+
+    감동 포인트 -->
+
+
+    <section class="main_banner slides visuals ">
+        <ul class="container">             
+
+            <li class="slide">
+                <a href="#">
+                    <img src="images/slide_image_01.jpg" alt="">
+                    <h2>은은한 아름다움으로 ..</h2>
+                </a>
+            </li>
+ 
+ 
+            <li class="slide">
+                <a href="#">
+                    <img src="images/slide_image_02.jpg" alt="">
+                    <h2>생기발랄 다이내믹</h2>
+                </a>
+            </li>
+
+           
+            <li class="slide">
+                <a href="#">
+                    <img src="images/slide_image_03.jpg" alt="">
+                    <h2>깜깜한 밤, 나는 더깜깜하게~</h2>
+                </a>
+            </li>
+        </ul>
+        
+    </section>
+
+    <script src="js/jquery-1.12.3.js"></script>
+   
+<!--    
+   <script>
+
+        let slideContainer = $('.container');
+        let slide = slideContainer.find('.slide');
+        let slideCount = slide.length;
+        let currentIdx = 0;
+
+        function autoSlide(){
+            setInterval(function(){
+            // 3초 마다 움직인다. 반복.
+            nextIdx = (currentIdx + 1) % slideCount;
+            slideContainer.animate({
+                marginLeft:-1920*nextIdx + 'px'
+            });
+            currentIdx = nextIdx;
+        },3000)
+        }
+
+        autoSlide();
+
+
+    </script>
+ -->
+
+<script>
+
+    let slideContainer = $('.main_banner');
+    let slide = slideContainer.find('.slide');
+    let slideCount = slide.length;
+    let currentIdx = 0;
+    slide.eq(currentIdx).fadeIn();
+    setInterval(showNextSlide, 3000);
+
+    function showNextSlide() {
+    let nextIdx = (currentIdx + 1) % slideCount;
+    slide.eq(currentIdx).fadeOut();
+    slide.eq(nextIdx).fadeIn();
+    currentIdx = nextIdx;
+    }
+
+
+
+</script>
+
+
+
+
+
+    <section class="category">
+        <div class="category_inner " >
+            <div class="item item1 reveal_cat">
+                <h2>편집디자인</h2>
+                <p>책과 어쩌고 저쩌고를 잘 뽀아내는 어시기</p>
+                <button>자세히보기</button>
+            </div>
+            <div class="item item2 reveal_cat" style="transition-delay:0.2s;">
+                <h2>편집디자인</h2>
+                <p>책과 어쩌고 저쩌고를 잘 뽀아내는 어시기</p>
+                <button>자세히보기</button>
+            </div>
+            <div class="item item3 reveal_cat">
+                <h2>편집디자인</h2>
+                <p>책과 어쩌고 저쩌고를 잘 뽀아내는 어시기</p>
+                <button>자세히보기</button>
+            </div>
+            <div class="item item4 reveal_cat">
+                <h2>편집디자인</h2>
+                <p>책과 어쩌고 저쩌고를 잘 뽀아내는 어시기</p>
+                <button>자세히보기</button>
+            </div>
+        </div>
+    </section>
+    <section class="product_list">
+        <div class="product_title">
+            <h2>Product List</h2>
+        </div>
+        <div class="product_wrap reveal">
+            <div class="product">
+                <img src="images/3fb5ed13af1351.jpg" alt="와인"/>
+                <h3>01</h3>
+                <p>100,000원</p>
+            </div>
+            <div class="product">
+                <img src="images/3fb5ed13af1351.jpg" alt="와인"/>
+                <h3>01</h3>
+                <p>100,000원</p></div>
+            <div class="product">
+                <img src="images/3fb5ed13af1351.jpg" alt="와인"/>
+                <h3>01</h3>
+                <p>100,000원</p></div>
+            <div class="product">
+                <img src="images/3fb5ed13af1351.jpg" alt="와인"/>
+                <h3>01</h3>
+                <p>100,000원</p></div>
+            <div class="product">
+                <img src="images/3fb5ed13af1351.jpg" alt="와인"/>
+                <h3>01</h3>
+                <p>100,000원</p></div>
+            <div class="product">
+                <img src="images/3fb5ed13af1351.jpg" alt="와인"/>
+                <h3>01</h3>
+                <p>100,000원</p></div>
+            <div class="product">
+                <img src="images/3fb5ed13af1351.jpg" alt="와인"/>
+                <h3>01</h3>
+                <p>100,000원</p></div>
+            <div class="product">
+                <img src="images/3fb5ed13af1351.jpg" alt="와인"/>
+                <h3>01</h3>
+                <p>100,000원</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="notice">
+        <div class="site_add">
+            <div class="site_add_contents">
+                <h2>서보영 디자인 사이트</h2>
+                <p>010-1234-5678로 전화주시면 최고의 서비스를 쏼라솰라.</p>
+                <button>더보기</button>
+            </div>
+
+        </div>
+        <div class="custom_area">
+            <!-- <iframe src="https://vozzang.dothome.co.kr/c20231018" width="100%", height=500px></iframe> -->
+            <div class="notice_t">
+                <h4>공지사항 <span>Notice</span></h4>
+                <div class="notice_ul">
+                    <ul class="notice_ul_left">
+                        <a href="#"><li class="">앨범의 기능은 무엇임?</li></a>
+                        <a href="#"><li class="">브라우저 테스트??</li></a>
+                        <a href="#"><li class="">스마트 디바이스에서 바로</li></a>
+                    </ul>
+                    
+                    <ul class="notice_ul_right">
+                        <a href="#"><li class="">2023-10-27</li></a>
+                        <a href="#"><li class="">2023-10-17</li></a>
+                        <a href="#"><li class="">2023-10-07</li></a>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="customer">                
+                <h4>고객센터 Customer</h4>
+                <p>AM 09:00 ~ PM06:00</p>
+                <div class="t_num">052-888-3939</div>
+                <div class="online_contact">온라인 문의</div>
+            </div>
+            <div class="qna">
+                <h4>질문과답변 Q&A</h4>
+                <div class="notice_ul">
+                
+                    <ul class="notice_ul_left">
+                        <a href="#"><li class="">앨범의 기능은 무엇임?</li></a>
+                        </ul>
+                    
+                    <ul class="notice_ul_right">
+                        <a href="#"><li class="">2023-10-27</li></a>
+                    </ul>
+                
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="business_info">
+        <div class="business_info_t">
+            <h3>Business Info<span> call me!!</span></h3>
+        </div>
+        <div class="business_info_itemwrap">
+            <div class="business_info_item reveal_cat">
+                <!-- <img src="images/business_info_01.png" alt=""/> -->
+                <i class="fa-solid fa-message fa-2xl"></i>
+                <h5>Design Consultant</h5>
+                <p>consultant consultant consultant consultant consultant</p>
+            </div>
+            <div class="business_info_item reveal_cat">
+                <!-- <img src="" alt=""/> -->
+                <i class="fa-solid fa-box-archive fa-2xl"></i>
+                <h5>Design Goods</h5>
+                <p>consultant consultant consultant consultant consultant</p>
+            </div>
+            <div class="business_info_item  reveal_cat">
+                <!-- <img src="" alt=""/> -->
+                <i class="fa-solid fa-laptop-file fa-2xl"></i>
+                <h5>Design Works</h5>
+                <p>consultant consultant consultant consultant consultant</p>
+            </div>
+            
+        </div>
+    </section>
+    <section class="contact_us">
+        <div class="contact_us_dark"></div>
+        <div class="contact_us_wrap">
+            
+            <div class="contact_us_txt reveal_li" id="contxt">
+                <h2>서보영 디자인 컴퍼니</h2>
+                <h4>(대표전화) 010-1234-5678</h4>
+                <p>"서보영 디자인 컴퍼니는<br/>
+                    7년간 <span>10,000여개 이상</span>의 홈페이지를 <br/>제작해온 회사입니다."<br/>
+                    풍부한 홈페이지 제작 경험으로<br/>다양한 제작 프로그램이 대부분 개발되어 있어<br/>제작비용을 무료로 제공할 수 있게 되었습니다.
+                    고객님의 홈페이지를 운영할<br/>관리비용 <span>월 3만원</span>이면<br/>
+                    임대하는 홈페이지가 아닌<br/>본인 소유의 홈페이지를 가지실 수 있습니다.
+                    "기업부설연구소" 인증회사<br/><span>서보영 디자인 컴퍼니</span>에서<br/>온라인 사업을 시작하세요!</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        
+    // let conTxt = document.getElementById('contxt');
+
+    // conTxt.addEventListener('scroll',() =>{
+    // let value = conTxt.scrollY;
+
+    // text.style.marginTop = value * + 'px';
+    // });
+
+
+    // const element = document.querySelector("div#scroll-box");
+    // // 이공간에다가 스크롤 하면 
+    // const output = document.querySelector("p#output");
+
+    // element.addEventListener("scroll", (event) => {
+    // output.innerHTML = "Scroll event fired!";
+    // setTimeout(() => {
+    //     output.innerHTML = "Waiting on scroll events...";
+    // }, 1000);
+    // });
+
+
+
+    function scrollBanner(config) {
+	thistop = -($('.contact_us_wrap').offset().top-200);
+	scrollPos = $(this).scrollTop()+thistop;
+
+	config.bannerText.css({
+		'margin-top' : -(scrollPos/3) + "px",
+		'opacity' : 1-(scrollPos/300)
+	});
+
+	config.banner.css({
+		'background-position': 'center ' + (-scrollPos/4) + "px"
+	});
+
+}
+
+$(document).ready(function(){
+	
+	$(window).scroll(function() {
+
+		scrollBanner({
+			banner: $('.contact_us_wrap'),
+			bannerText: $('.contact_us_txt')
+		});
+
+	});
+
+});
+
+
+
+
+
+
+    </script>
+<!-- 
+
+
+<script>
+    
+let conTxt = document.getElementById('contxt');
+
+window.addEventListener('scroll',() =>{
+let value = window.scrollY;
+
+text.style.marginTop = value * + 'px';
+});
+</script>
+ -->
+
+
+    <section class="recomended_list">
+    
+     <div class="recomended_list_t">
+            Product Recomended <span>추천제품</span>
+        </div>
+       
+     <div class="recomended_cell">
+    
+            <div class="re_li_cell">
+                <div class="img_size_short"><img src="images/1967168586_calendula-officinalis-1695980_1920.jpg" alt=""></div>
+                <p>001</p>
+            </div>
+            <div class="re_li_cell">
+                <div class="img_size_long"><img src="images/2046398464_fried-eggs-846362_1920.jpg" alt=""></div>
+                <p>002</p>
+            </div>
+            <div class="re_li_cell">
+                <div class="img_size_long"><img src="images/1196247565_olive-oil-1028770_1920.jpg" alt=""></div>
+                <p>003</p>
+            </div>
+            <div class="re_li_cell">
+                <div class="img_size_short"><img src="images/13371702_oil-1062433_1920.jpg" alt=""></div>
+                <p>004</p>
+            </div>
+            <div class="re_li_cell">
+                <div class="img_size_mid"><img src="images/2123909020_oil-2020831_1920.jpg" alt=""></div>
+                <p>005</p>
+            </div>
+            <div class="re_li_cell">
+                <div class="img_size_short"><img src="images/853493766_food-320863.jpg" alt=""></div>
+                <p>006</p>
+            </div>
+            <div class="re_li_cell">
+                <div class="img_size_short"><img src="images/758868173_olive-oil-1349811_1920.jpg" alt=""></div>
+                <p>007</p>
+            </div>
+            <div class="re_li_cell">
+                <div class="img_size_mid"><img src="images/2016913960_filipendula-ulmaria-1526400_1920.jpg" alt=""></div>
+                <p>008</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer_terms">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="#">온라인문의</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+        <div class="footer_info">
+            <ul>
+                <li>
+                    <div class="info_box">
+                        <p>Information</p>
+                        <p>상호명</p>
+                        <p>대표이름</p>
+                        <p>사업장 주소</p>
+                        <p>전화번호</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info_box">
+                        <p>Licence</p>
+                        <p>사업자 번호</p>
+                        <p>통신판매 번호</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info_box">
+                        <p>Web MAster</p>
+                        <p>e-mail:</p>
+                        <p>책임자</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info_box">
+                        <p>Bank Info</p>
+                        <p>은행명</p>
+                        <p>계좌번호</p>
+                        <p>예금주</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_copyright">
+            <div class="footer_copyright_wrap">
+                <div class="footer_copyright_copyright">
+                    <p>저작권 도용을 하시면 법적 처리를 하겠습니다.</p>
+                    <p>Copyright 2023. HansFuller All Rights Resserved.</p>
+                </div>
+                <div class="footer_copyright_sns">
+                    <ul>
+                        <li><img src="images/sns.png" alt=""></li>
+                        <li><img src="images/sns.png" alt=""></li>
+                        <li><img src="images/sns.png" alt=""></li>
+                        <li><img src="images/sns.png" alt=""></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+    <script src="js/jquery-1.12.3.js"></script>
+
+    
+    <script>
+
+
+        
+        // const menuLi = document.querySelectorAll('.menu');
+        // const subMenu = document.querySelectorAll('.sub_menu');
+
+        // for(let i = 0; i < menuLi.length; i++){
+        //     menuLi[i].addEventListener('mouseover', function() {
+        //         subMenu[i].classList.add('active');
+        //     });
+        // }
+
+        // for(let i = 0; i < menuLi.length; i++){
+        //     menuLi[i].addEventListener('mouseleave', function() {
+        //         subMenu[i].classList.remove('active')
+        //     });
+        // }
+
+
+
+        /*
+        var sub_m = document.querySelector('.sub_menu'),
+            mainMenu = document.querySelector('.menu');
+        mainMenu.addEventListener('mouseover',function(){
+            sub_m.style.height = "270px";
+        });
+        
+        mainMenu.addEventListener('mouseout',function(){
+            sub_m.style.height = "50px";
+        })
+*/
+
+
+        let mainMenu = $('.menu > li');
+        mainMenu.mouseover(function () {
+        $(this).find('ul').stop().slideDown();
+        }).mouseout(function () {
+        $(this).find('ul').stop().slideUp();
+        });
+
+    </script>
+
+
+
+    
+<script>
+    let categoryMenu = $('.category > .category_inner > .item');
+        categoryMenu.mouseover(function () {
+        $(this).find('h2').css(fontsize, "4rem");
+        $(this).find('p').css(fontsize, "1.6rem");
+
+        }).mouseout(function () {
+        $(this).find('h2').css(fontsize, "2.8rem");
+        $(this).find('p').css(fontsize, "1.2rem");
+        });
+    
+
+</script>
+
+<!-- product_list 병 통째로 올라오는 부분 -->
+<script>
+
+    window.addEventListener('scroll', reveal);
+    
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal')
+    
+        for(var i=0; i< reveals.length; i++ ){
+    
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 250;
+    
+            if(revealTop< windowHeight - revealPoint){
+                reveals[i].classList.add('active');
+            }else{
+                reveals[i].classList.remove('active');
+    
+            }
+        }
+    }
+    </script>
+    
+
+    <!-- 카테고리 용 reveal -->
+<script>
+
+window.addEventListener('scroll', revealCat);
+
+function revealCat(){
+    var revealsCat = document.querySelectorAll('.reveal_cat')
+
+    for(var i=0; i< revealsCat.length; i++ ){
+
+        var windowHeight = window.innerHeight;
+        var revealCatTop = revealsCat[i].getBoundingClientRect().top;
+        var revealCatPoint = 50;
+
+        if(revealCatTop< windowHeight - revealCatPoint){
+            revealsCat[i].classList.add('active');
+        }else{
+            revealsCat[i].classList.remove('active');
+
+        }
+    }
+}
+</script>
+
+    <!-- 추천 상품 용 reveal -->
+    <script>
+
+        window.addEventListener('scroll', revealCell);
+        
+        function revealCell(){
+            var revealCells = document.querySelectorAll('.re_li_cell')
+        
+            for(var i=0; i< revealCells.length; i++ ){
+        
+                var windowHeight = window.innerHeight;
+                var revealCellTop = revealCells[i].getBoundingClientRect().top;
+                var revealCellPoint = 20;
+        
+                if(revealCellTop< windowHeight - revealCellPoint){
+                    revealCells[i].classList.add('active');
+                }else{
+                    revealCells[i].classList.remove('active');
+        
+                }
+            }
+        }
+        </script>
+
+</body>
+<!-- </html> -->
